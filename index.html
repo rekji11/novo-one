@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo One - Simple Lending Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-text"><img src="img/logo.jpeg" alt="Novo One Logo" class="logo-icon"> Novo One</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#calculator">Loan Calculator</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Trusted Lending Partner</h1>
+            <p>Simple, fast, and secure lending solutions for your needs</p>
+            <a href="#calculator" class="cta-button">Calculate Your Loan</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <i class="fas fa-home"></i>
+                <h3>Home Loans</h3>
+                <p>Competitive rates for your dream home</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-car"></i>
+                <h3>Auto Loans</h3>
+                <p>Flexible financing for your vehicle</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Education Loans</h3>
+                <p>Invest in your future with our education loans</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator">
+        <h2>Loan Calculator</h2>
+        <div class="calculator-container">
+            <div class="input-group">
+                <label for="loanAmount">Loan Amount (₱)</label>
+                <input type="number" id="loanAmount" min="1000" max="10000000" value="100000">
+            </div>
+            <div class="input-group">
+                <label for="interestRate">Interest Rate (%)</label>
+                <input type="number" id="interestRate" min="1" max="30" value="5" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="loanTerm">Loan Term (Years)</label>
+                <input type="number" id="loanTerm" min="1" max="30" value="5">
+            </div>
+            <button onclick="calculateLoan()" class="calculate-button">Calculate</button>
+            <div class="result" id="loanResult">
+                <h3>Monthly Payment: <span id="monthlyPayment">₱0</span></h3>
+                <h3>Total Payment: <span id="totalPayment">₱0</span></h3>
+                <h3>Total Interest: <span id="totalInterest">₱0</span></h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Novo One</h2>
+        <p>We are committed to providing simple and transparent lending solutions to help you achieve your financial goals. With years of experience and a customer-first approach, we make borrowing easy and stress-free.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <form id="contactForm">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Novo One</h3>
+                <p>Simple lending solutions for everyone</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@novo1ne.com</p>
+                <p>Phone: +00000000</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Novo One. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
